@@ -40,7 +40,8 @@ const BookForm = ({ isEditing }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div style={{backgroundColor:"gray"}}>
+    <form style={{margin:"auto",height:"400px",width:"300px",border:"1px solid"}} onSubmit={handleSubmit}>
       <input
         type="text"
         name="title"
@@ -48,7 +49,8 @@ const BookForm = ({ isEditing }) => {
         onChange={handleChange}
         placeholder="Title"
         required
-      />
+      /><br></br>
+      <br></br>
       <input
         type="text"
         name="author"
@@ -56,7 +58,8 @@ const BookForm = ({ isEditing }) => {
         onChange={handleChange}
         placeholder="Author"
         required
-      />
+      /><br></br>
+      <br></br>
       <input
         type="number"
         name="publishedYear"
@@ -64,7 +67,8 @@ const BookForm = ({ isEditing }) => {
         onChange={handleChange}
         placeholder="Published Year"
         required
-      />
+      /><br></br>
+      <br></br>
       <input
         type="text"
         name="genre"
@@ -72,15 +76,19 @@ const BookForm = ({ isEditing }) => {
         onChange={handleChange}
         placeholder="Genre"
         required
-      />
+      /><br></br>
+      <br></br>
       <textarea
         name="summary"
         value={book.summary}
         onChange={handleChange}
         placeholder="Summary"
       />
+      <br></br>
+      <br></br>
       <button type="submit">{isEditing ? 'Update' : 'Add'} Book</button>
     </form>
+    </div>
   );
 };
 
